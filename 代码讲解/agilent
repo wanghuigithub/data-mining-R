@@ -1,1 +1,12 @@
+一、目标代码：
+neg95 <- apply(y$E[y$genes$ControlType==-1,],2,function(x) quantile(x,p=0.95))
+
+二、主体函数：apply
+apply函数：apply(x, margin, fun, ...)
+x：矩阵或者数组
+margin：一个向量，给出在哪几个维度上应用函数【1表示行，2表示列，3表示层】
+fun：要应用的函数
+…：传递给fun的额外参数
+
+三、y长什么样子：
 
