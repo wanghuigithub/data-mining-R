@@ -19,6 +19,7 @@ illumina：_non_normalized.txt.gz
 二、数据分析
 1、
 target=read.table("target.txt",header=T)
+#读取单通道数据类似于双色数据，除了应该添加参数green.only=TRUE到read.maimages()来说明没有红色通道。由Agilent特征提取软件生成的单通道Agilent强度，可以通过下面的命令读取
 RG <- read.maimages(target, source="agilent", path="./GSE107914/",green.only=TRUE)
 y <- backgroundCorrect(RG,method="normexp")
 y <- normalizeBetweenArrays(y,method="quantile")
