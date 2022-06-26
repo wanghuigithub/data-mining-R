@@ -2,6 +2,9 @@
 1、原始数据（待分析数据）
 （1）下载：
 Supplementary file	-> http链接
+affymetrix: _RAW
+agilent: _RAW
+illumina：_non_normalized.txt.gz
 （2）先解压，解压后文件前缀GSM。
 2、注释数据
 （1）可以理解为字典，定义该芯片平台中的概念（基因ID，描述...）。定义该芯片中的探针ID对应的基因信息。何为基因芯片：即探针（基因）序列
@@ -14,5 +17,10 @@ Supplementary file	-> http链接
 
 
 二、数据分析
+1、
+
+三、关键点记录
+1、lfc(log fold change)。相关概念没完全懂
+参考：https://www.cnblogs.com/leezx/p/7132099.html
 
 
