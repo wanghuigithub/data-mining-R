@@ -18,9 +18,17 @@ illumina：_non_normalized.txt.gz
 
 二、数据分析
 1、
+target=read.table("target.txt",header=T)
+RG <- read.maimages(target, source="agilent", path="./GSE107914/",green.only=TRUE)
+y <- backgroundCorrect(RG,method="normexp")
+y <- normalizeBetweenArrays(y,method="quantile")
+
 
 三、关键点记录
 1、lfc(log fold change)。相关概念没完全懂
 参考：https://www.cnblogs.com/leezx/p/7132099.html
 
+四、参考
+1、https://zhuanlan.zhihu.com/p/344426350
+2、https://search.bilibili.com/all?keyword=%E7%94%9F%E4%BF%A1%E6%8A%80%E8%83%BD%E6%A0%91&from_source=banner_search&spm_id_from=333.334.b_62616e6e65725f6c696e6b.1
 
